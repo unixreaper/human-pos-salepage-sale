@@ -1,0 +1,41 @@
+.reveal {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition:
+    opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rise {
+  transform: translate3d(0, 34px, 0) scale(0.985);
+}
+
+.pop {
+  transform: translate3d(0, 26px, 0) scale(0.93) rotate(-1.25deg);
+}
+
+.fade {
+  transform: translate3d(0, 14px, 0);
+}
+
+.left {
+  transform: translate3d(-42px, 0, 0) scale(0.98);
+}
+
+.right {
+  transform: translate3d(42px, 0, 0) scale(0.98);
+}
+
+.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}
